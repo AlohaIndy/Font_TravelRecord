@@ -5,21 +5,14 @@ body{
 /* --------- */
 
 /* navbar for login/register */
-div.navbar-header2>a.navbar-brand,div.navbar-header2>a.navbar-brand:hover{
-    color: #27a4dd;
-}
-div.navbar-header2{
-	width: 165px;
-    height: auto;
+div.navbar-logo{
     text-align: center;
+    vertical-align: middle;
     font-weight: bold;
-    position: absolute;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    display: block;
+    font-size: 18px;
+    color: #27a4dd;
+    height: 50px;
+    line-height: 50px;
 }
 nav.navbar-static{
     background-color: white;

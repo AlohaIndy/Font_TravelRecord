@@ -5,9 +5,11 @@
             TravelRecordApp
         </title>
         <!-- Packaged -->
+        <link href="/image/icon_web.jpg" rel="icon"/>
         <link href="/font/kanit.css" rel="stylesheet"/>
         <link href="/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
         <link href="/css/navbar-header.css" rel="stylesheet"/>
+        <link href="index.css" rel="stylesheet"/>
         <!-- ........ -->
     </head>
     <body class="font-kanit">
@@ -55,15 +57,10 @@
                                 </a>
                             </li>
                         </ul>
-                        <div class="navbar-header2">
-                            <a class="navbar-brand" href="http://localhost:4000/">
-                                Travel Record App
-                            </a>
-                        </div>
                         <ul class="nav navbar-nav navbar-right">
                             <li class="dropdown" id="fat-menu">
                                 <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" id="drop3" role="button">
-                                    <img src="http://placehold.it/35x35" class="img-circle special-img">
+                                    <img class="img-circle special-img" id="profile-navbar-right" src="/image/default_profile.jpg"/>
                                 </a>
                                 <ul aria-labelledby="drop3" class="dropdown-menu">
                                     <li>
@@ -98,6 +95,100 @@
         </div>
         <!-- ........ -->
         <!-- content -->
+        <div class="container-fluid">
+            <table class="table-header">
+                <thead id="title">
+                    <tr>
+                        <th scope="col">
+                            <img id="logo-company" src="/image/logo_cse.jpg"/>
+                        </th>
+                        <th id="name-company" scope="col">
+                            <h4>
+                                บริษัท คอมพิวเตอร์ซีสเต็มอินทริเกรชั่น จำกัด
+                            </h4>
+                            เลขที่ใบเบิกค่าเดินทาง(ภายในประเทศ): 5852100081
+                            <br/>
+                            สถานะใบเบิก: ยังไม่ได้ส่ง
+                        </th>
+                        <th id="date-stamp"  scope="col">
+                            วันที่ขอเบิก: ยังไม่ได้ส่ง
+                        </th>
+                    </tr>
+                </thead>
+            </table>
+            <table class="table table-bordered table-hover">
+                <thead id="subtitle">
+                    <tr>
+                        <th rowspan="2" scope="col">
+                            วันที่ออกเดินทาง
+                        </th>
+                        <th colspan="2" scope="col">
+                            สถานที่
+                        </th>
+                        <th colspan="2" scope="col">
+                            ค่าใช้จ่ายกรณีขนส่งสาธารณะ
+                        </th>
+                        <th colspan="2" scope="col">
+                            ค่าชดเชยกรณีรถ(ส่วนตัว)
+                        </th>
+                        <th colspan="2" scope="col">
+                            อื่นๆ
+                        </th>
+                        <th rowspan="2" scope="col">
+                            เลขที่ใบเสร็จรับเงิน/ใบกำกับภาษี
+                        </th>
+                        <th rowspan="2" scope="col">
+                            รวมเงินต่อเที่ยว(บาท)
+                        </th>
+                        <th rowspan="2" scope="col">
+                            เหตุผลในการเดินทาง
+                        </th>
+                    </tr>
+                    <tr>
+                        <th scope="col">
+                            เริ่มต้น
+                        </th>
+                        <th scope="col">
+                            ปลายทาง
+                        </th>
+                        <th scope="col">
+                            พาหนะที่ใช้เดินทาง
+                        </th>
+                        <th scope="col">
+                            ค่าใช้จ่าย(บาท)
+                        </th>
+                        <th scope="col">
+                            ระยะทาง(กม.)
+                        </th>
+                        <th scope="col">
+                            อัตราชดเชย(บาท/กม.)
+                        </th>
+                        <th scope="col">
+                            ระบุ
+                        </th>
+                        <th scope="col">
+                            ค่าใช้จ่าย(บาท)
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">
+                            21 กพ. 2560
+                        </th>
+                        <td>
+                            Mark
+                        </td>
+                        <td>
+                            Otto
+                        </td>
+                        <td>
+                            @mdo
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <!-- ........ -->
     </body>
     <!-- Packaged -->

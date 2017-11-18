@@ -1,29 +1,15 @@
 /* body */
 body{
-    background-color: #e7f6fd;
+    background-color: white;
 }
 /* --------- */
 
 /* navbar-header */
-div.navbar-header2{
-	width: 165px;
-    height: auto;
-    text-align: center;
-    font-weight: bold;
-    position: absolute;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    display: block;
-}
-div.navbar-header2>a.navbar-brand,div.navbar-header>a.navbar-brand,div.navbar-header2>a.navbar-brand:hover,div.navbar-header>a.navbar-brand:hover{
+div.navbar-header>a.navbar-brand,div.navbar-header>a.navbar-brand:hover{
 	color: #27a4dd;
 }
 div.navbar-header{
     font-weight: bold;
-    display: none;
 }
 div.navbar-collapse{
 	font-weight: bold;
@@ -52,18 +38,16 @@ nav.navbar-static{
     background-color: white;
     box-shadow: 0px 0.5px 0.5px #27a4dd;
 }
+img#profile-navbar-right{
+    height: 35px;
+    width: 35px;
+}
 /* --------- */
 
 /* size screen */
 @media screen and (max-width: 1200px) {
 	div.collapse>ul.navbar-nav>li.choosed>a{
 		border-bottom-style: none;
-	}
-    div.navbar-header2 {
-        display: none;
-    }
-    div.navbar-header{
-    	display: block;
 	}
 }
 /* --------- */
