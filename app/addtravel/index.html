@@ -95,7 +95,7 @@
         </div>
         <!-- ........ -->
         <!-- content -->
-        <div class="container-fluid">
+        <div class="container-fluid" ng-app="angularTravel" ng-controller="tableDataAddCtrl">
             <table class="table-header">
                 <thead id="title">
                     <tr>
@@ -172,18 +172,42 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr ng-repeat="x in getData">
                         <th scope="row">
-                            21 กพ. 2560
+                            {{ x.date }}
                         </th>
                         <td>
-                            Mark
+                            {{ x.locationstart }}
                         </td>
                         <td>
-                            Otto
+                            {{ x.locationend }}
                         </td>
                         <td>
-                            @mdo
+                            {{ x.vehicle }}
+                        </td>
+                        <td>
+                            {{ x.cost }}
+                        </td>
+                        <td>
+                            {{ x.distance }}
+                        </td>
+                        <td>
+                            {{ x.rate }}
+                        </td>
+                        <td>
+                            {{ x.other }}
+                        </td>
+                        <td>
+                            {{ x.othercost }}
+                        </td>
+                        <td>
+                            {{ x.taxinvoice }}
+                        </td>
+                        <td>
+                            รวมราคา
+                        </td>
+                        <td>
+                            {{ x.reason }}
                         </td>
                     </tr>
                 </tbody>
@@ -203,6 +227,8 @@
     <script src="/bower_components/angular-loader/angular-loader.js">
     </script>
     <script src="/bower_components/angular-bootstrap/ui-bootstrap.js">
+    </script>
+    <script src="index.js">
     </script>
     <!-- ........ -->
 </html>
