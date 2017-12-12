@@ -110,13 +110,13 @@
                             <br/>
                             สถานะใบเบิก: ยังไม่ได้ส่ง
                         </th>
-                        <th id="date-stamp"  scope="col">
+                        <th id="date-stamp" scope="col">
                             วันที่ขอเบิก: ยังไม่ได้ส่ง
                         </th>
                     </tr>
                 </thead>
             </table>
-            <table class="table table-bordered table-hover">
+            <table class="table table-bordered table-hover table-data">
                 <thead id="subtitle">
                     <tr>
                         <th rowspan="2" scope="col">
@@ -173,9 +173,9 @@
                 </thead>
                 <tbody>
                     <tr ng-repeat="x in getData">
-                        <th scope="row">
+                        <td scope="row">
                             {{ x.date }}
-                        </th>
+                        </td>
                         <td>
                             {{ x.locationstart }}
                         </td>
@@ -204,7 +204,65 @@
                             {{ x.taxinvoice }}
                         </td>
                         <td>
-                            รวมราคา
+                            <span ng-if="x.cost!=null&&x.distance==null&&x.rate==null&&x.othercost==null">
+                                {{ x.cost }}
+                            </span>
+                            <span ng-if="x.cost==null&&x.distance!=null&&x.rate!=null&&x.othercost==null">
+                                {{ x.distance*x.rate }}
+                            </span>
+                            <span ng-if="x.cost==null&&x.distance==null&&x.rate==null&&x.othercost!=null">
+                                {{ x.othercost }}
+                            </span>
+                            <span ng-if="x.cost!=null&&x.distance!=null&&x.rate!=null&&x.othercost==null">
+                                {{ x.cost+(x.distance*x.rate) }}
+                            </span>
+                            <span ng-if="x.cost!=null&&x.distance==null&&x.rate==null&&x.othercost!=null">
+                                {{ x.cost+x.othercost }}
+                            </span>
+                            <span ng-if="x.cost==null&&x.distance!=null&&x.rate!=null&&x.othercost!=null">
+                                {{ (x.distance*x.rate)+x.othercost }}
+                            </span>
+                            <span ng-if="x.cost!=null&&x.distance!=null&&x.rate!=null&&x.othercost!=null">
+                                {{ x.cost+(x.distance*x.rate)+x.othercost }}
+                            </span>
+                        </td>
+                        <td>
+                            {{ x.reason }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {{ x.date }}
+                        </td>
+                        <td>
+                            {{ x.locationstart }}
+                        </td>
+                        <td>
+                            {{ x.locationend }}
+                        </td>
+                        <td>
+                            {{ x.vehicle }}
+                        </td>
+                        <td>
+                            {{ x.cost }}
+                        </td>
+                        <td>
+                            {{ x.distance }}
+                        </td>
+                        <td>
+                            {{ x.rate }}
+                        </td>
+                        <td>
+                            {{ x.other }}
+                        </td>
+                        <td>
+                            {{ x.othercost }}
+                        </td>
+                        <td>
+                            {{ x.taxinvoice }}
+                        </td>
+                        <td>
+                            ผลรวม
                         </td>
                         <td>
                             {{ x.reason }}
