@@ -1,0 +1,9 @@
+diff a/app/historytravel/index.html b/app/historytravel/index.html	(rejected hunks)
+@@ -94,6 +94,7 @@
+         </div>
+         <!-- ........ -->
+         <!-- content -->
++        test
+         <!-- ........ -->
+     </body>
+     <!-- Packaged -->
